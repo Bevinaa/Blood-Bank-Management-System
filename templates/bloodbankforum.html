@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Doner Donation page</title>
+        <link rel="stylesheet" href="/static/bloodbankforum.css">
+{% endblock %}
+
+{% block body%}
+
+    <h1 >Doner , Patient & BloodBank Details</h1>
+    <table border="1" style="width: 70%;">
+        <thead>
+            <tr>
+                <th>Doner ID</th>
+                <th>Doner Name</th>
+                <th>Gender</th>
+                <th>age</th>
+                <th>Blood group</th>
+                <th>Phone no</th>
+                <th>last donation date</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for dnr in all_doners %}
+                <tr>
+                    <td>{{ dnr[0] }}</td>
+                    <td>{{ dnr[1] }}</td>
+                    <td>{{ dnr[2] }}</td>
+                    <td>{{ dnr[3] }}</td>
+                    <td>{{ dnr[4] }}</td>
+                    <td>{{ dnr[5] }}</td>
+                    <td>{{ dnr[6] }}</td>
+                </tr>
+
+
+            {% endfor %}
+        </tbody>
+
+        
+        
+        
+        <table border="1" style="width: 70%;">
+            <thead>
+                <tr>
+                        <th>Patient ID</th>
+                        <th>Patient Name</th>
+                        <th>Gender</th>
+                        <th>age</th>
+                        <th>Blood group</th>
+                        <th>Phone no</th>
+                        
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pt in all_patients %}
+                        <tr>
+                            <td>{{ pt[0] }}</td>
+                            <td>{{ pt[1] }}</td>
+                            <td>{{ pt[2] }}</td>
+                            <td>{{ pt[3] }}</td>
+                            <td>{{ pt[4] }}</td>
+                            <td>{{ pt[5] }}</td>
+                        </tr>
+        
+        
+                    {% endfor %}
+                </tbody>
+
+    <table border="1" style="width: 70%;">
+        <thead>
+            <tr>
+                <th>Bloodbank ID</th>
+                <th>Bloodbank Name</th>
+                <th>Director</th>
+                <th>Operating Hours</th>
+                <th>Contact number</th>
+                <th>Email</th>           
+            </tr>
+        </thead>
+        <tbody>
+            {% for bb in all_bb %}
+                <tr>
+                    <td>{{ bb[0] }}</td>
+                    <td>{{ bb[1] }}</td>
+                    <td>{{ bb[2] }}</td>
+                    <td>{{ bb[3] }}</td>
+                    <td>{{ bb[4] }}</td>
+                    <td>{{ bb[5] }}</td>
+                    
+                </tr>
+            
+            {% endfor %}
+        </tbody>
+
+{% endblock %}

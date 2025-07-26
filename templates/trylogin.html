@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Login page</title>
+        <link rel="stylesheet" href="/static/trylogin.css">
+{% endblock %}
+    
+
+{% block body %}
+
+        <div class="bg">
+            <div class="left">
+                <h1 style="text-align:center;margin-top:100px;color: white;" >
+                    Welcome To Online Blood Repository
+                </h1>
+                <p style="text-align:center ; font-weight:bold ; margin-top:60px ; font-size : 20px;color: white;">
+                    It is a website to find a Donor and to Be a Donar
+                </p>
+                <p style="text-align:center;font-weight:bold ;  font-size : 20px;color: white;">
+                    Here you can find blood as quick.
+                </p>
+                <p style="text-align:center ; font-weight:bold ;  font-size: 20px;color: white;">
+                    Together we can make a difference. Donate blood today
+                </p>
+            </div>
+            <div class="right">
+                {% if info %}
+                    <p style="font-size: 25px;color: black;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">{{ info }}</p>
+                {% endif %}
+                <form style="text-align: center;" method="post" action="/form_login">
+                    <p class="tx">USER LOGIN</p>
+                    <input class="em" type="text" name="user" placeholder="Email">
+                    <input class="em" type="password" name="pwd" placeholder="Password">
+                    <p style="font-size: 30px;color: red;font-family: 'Times New Roman', Times, serif;font-weight: 600;">choose role to login :</p>
+                    <select style="margin-bottom: 10px;margin-top: -10px;margin-bottom: 20px;background-color: red;color: white;" id="myDropdown" name="role">
+                        <option value="doner">doner</option>
+                        <option value="patient">patient</option>
+                        <option value="bloodbank">bloodbank</option>
+                        
+                    </select><br>
+
+                    <input type="submit" class="logbutton" name = "button_clicked" value="Login">
+
+                </form>
+                <form method="post"  action="/register">
+                    <input type="submit" class="regbutton" value="Registration">
+                </form>
+            </div>
+            
+                
+                
+                
+            
+        
+        </div>
+{% endblock %}

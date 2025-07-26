@@ -1,0 +1,46 @@
+body{
+    margin : 0;
+    background-image: url('/static/bloog_grp.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+
+.bdtxt{ 
+    display: block;
+    color: white;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+}
+
+.regbutton{
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(214, 14, 14);
+    color: rgb(242, 238, 238);
+    
+}
+
+.centerblock{
+    width: 1000px;
+    height: 500px;
+    text-align: center;
+    margin-left: 220px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns:1fr;
+    box-shadow: 15px 15px 20px rgb(40, 30, 30);
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur(40px);
+    box-shadow: 15px 15px 20px rgb(40, 30, 30);
+    
+     
+}

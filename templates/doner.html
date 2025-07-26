@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Login page</title>
+        <link rel="stylesheet" href="/static/doner.css">
+{% endblock %}
+
+
+{% block body %}
+    <h1 style="text-align: center;color: white;">Doner Registration Form</h1>
+    <div class="main">
+        <form class="full_temp" method="post" action="/donerregsubmit">
+            
+            {% if info %}
+                <p class="query_font">{{ info }}</p>
+            {% endif %}
+            
+            <p class="query_font">Name :</p>
+            <input class="inp_box" name="d_name" type="text">
+            
+    
+            <p class="query_font">Gender :</p>
+            <label for="male" style="font-size: 20px;color: white;" checked>
+                <input type="radio" id="male" name="d_gender" value="male">
+                Male
+            </label>
+            
+            <label for="female" style="font-size: 20px;color: white;">
+                <input type="radio" id="female" name="d_gender" value="female">
+                Female
+            </label>
+            <label for="other" style="font-size: 20px;color: white;">
+                <input type="radio" id="other" name="d_gender" value="other">
+                Other
+            </label>
+
+            <p class="query_font">DOB :</p>
+            <input class="inp_box" name="d_dob" type="date">
+
+            <p class="query_font">Blood Group :</p>
+            <select id="myDropdown" name="d_bloodgrp">
+                <option value="A+ve">A+ve</option>
+                <option value="A-ve">A-ve</option>
+                <option value="B+ve">B+ve</option>
+                <option value="B-ve">B-ve</option>
+                <option value="O+ve">O+ve</option>
+                <option value="O-ve">O-ve</option>
+                <option value="AB+ve">AB+ve</option>
+                <option value="AB-ve">AB-ve</option>
+            </select>
+            
+    
+            <p class="query_font">Contact Number :</p>
+            <input class="inp_box" name="d_contact" type="number">
+            <p class="query_font">Medical Report Link</p>
+            <input class="inp_box" name="d_medicalreport" type="text"><br>
+
+            <p class="query_font">Email :</p>
+            <input class="inp_box" name="d_email" type="email"><br>
+
+            <p class="query_font">New Password :</p>
+            <input class="inp_box" name="d_pass1" type="password" placeholder="Type a new password"><br>
+            <p class="query_font">Retype Password :</p>
+            <input class="inp_box" name="d_pass2" type="password" placeholder="Re-enter your password"><br>
+
+            
+    
+
+            <input type="submit" class="submitbutton" name="donersubmitbutton" value="Submit">
+    
+        </form>
+
+    </div>
+    
+    
+{% endblock %}

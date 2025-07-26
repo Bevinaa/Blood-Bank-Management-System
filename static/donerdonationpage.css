@@ -1,0 +1,79 @@
+body{
+    margin : 0;
+    font-family:sans-s;
+    background-image:url('/static/dna.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+    text-align: center;
+    background-position: center center;
+    margin-bottom: 100px;
+}
+
+
+
+table{
+    width : 30%;
+    margin: 100px auto;
+    border-collapse: collapse;
+}
+
+th , td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: centre;
+}
+
+th{
+    background-color: rgb(15, 1, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+tr:nth-child(odd){
+    background-color: red;
+}
+
+tr:nth-child(even){
+    background-color: whitesmoke;
+}
+
+tr:hover{
+    
+    background-color: lightblue;
+}
+
+span{
+
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255 ,0.7);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+
+}
+
+.submitbutton1{
+    padding: 8px 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    color: red;
+    background-color: rgb(245, 247, 245);
+}
+
+.submitbutton2{
+    padding: 8px 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: rgb(245, 247, 245);
+}

@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Patient page</title>
+        <link rel="stylesheet" href="/static/donerdonationpage.css">
+{% endblock %}
+
+
+
+{% block body%}
+
+    <h1 style="margin-top: 80px;color: white;font-size: 60px;margin-bottom: 70px;"> Instructions for Doners to Donate Blood</h1>
+    <p style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;">                             
+
+        Wait Duration: Wait for at least 56 days (or 8 weeks) between whole blood donations to ensure your body replenishes its red blood cell count.
+        
+        Alcohol Consumption: Refrain from consuming alcoholic beverages for at least 24 hours before donating blood to ensure accurate testing and a smooth donation process.
+        
+        Healthy Lifestyle: Maintain a balanced diet and hydrate well before donating blood to support your body's recovery post-donation.
+        
+        Medical Eligibility: Ensure you meet the minimum health requirements for donation, such as having a healthy hemoglobin level and being free of certain infections.
+        
+        Rest After Donation: Take it easy after donating blood. Avoid intense physical activity or heavy lifting for at least a few hours to prevent dizziness or discomfort.
+    </p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>blood groups required</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for blood in bloodgroups %}
+                <tr>
+                    <td>{{ blood }}</td>
+                </tr>
+
+
+            {% endfor %}
+        </tbody>
+
+    </table>
+
+    <form action="/donate_blood" style="text-align: center;align-items: centre;">
+        <input type="submit" class="submitbutton2" name="donatebutton" value="Donate Blood">
+
+    </form>
+
+    <p style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;margin-top: 50px;">
+        If you want to leave your doner role.
+    </p>
+    <p style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;">
+        please fill the following and click remove account button
+    </p>
+
+    {% if info%}
+
+        <p style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;margin-bottom: 50px;">{{ info }}</p>
+
+    {% endif %}
+
+    
+    <form action="/smt_rmv_doner" style="text-align: center;align-items: center;">
+        <label  style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;">Email :
+            <input type="text" name="rmv_mail" placeholder="enter your mail id" style="height: 30px;width: 300px;">
+        </label><br><br>
+        <label  style="color: white;font-size: 20px;font-weight: bold;font-family: 'Lucida Grande', 'Lucida Sans';margin-left: 100px;margin-right: 100px;">Password :
+            <input type="password"  name="rmv_pass" placeholder="enter your password" style="height: 30px;width: 300px;">
+        </label><br><br><br>
+
+        <input type="submit" class="submitbutton1" name="rmv_button" value="Remove account">
+    </form>
+    
+
+
+{% endblock %}

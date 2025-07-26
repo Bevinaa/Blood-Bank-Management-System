@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Login page</title>
+        <link rel="stylesheet" href="/static/regdecision.css">
+{% endblock %}
+    
+{% block body %}
+    
+    <div class="centerblock">
+        <h1 style="color: white;">Blood Repository</h1>
+        <p class="bdtxt">
+            Discover the profound beauty in giving—the simple act of donating blood holds the power to save lives and create a ripple of hope across communities.
+            Witness the extraordinary beauty of humanity coming together, as every drop of donated blood becomes a lifeline for those in need, illuminating the path toward healing and resilience.
+
+        </p>
+        <form action="/donerpagedirect" method="post">
+            <input type="submit" class="regbutton" value="Register as Doner">
+        </form>
+        <form action="/patientpagedirect" method="post">
+            <input type="submit" class="regbutton" value="Register as Patient">
+        </form>
+        <form action="/bloodbankpagedirect" method="post">
+            <input type="submit" class="regbutton" value="Register as BloodBank">
+        </form>
+        
+        
+       
+        
+
+    </div>
+    
+{% endblock %}

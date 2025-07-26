@@ -1,0 +1,93 @@
+body{
+    background-image:url('/static/log4.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+}
+
+
+.bg{
+    
+    width: 1000px;
+    height: 600px;
+    margin-left: 220px;
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    box-shadow: 15px 15px 20px rgb(40, 30, 30);
+}
+.left{
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur(8px);
+    
+     
+}
+.l{
+    background: rgba(241, 239, 239, 0.7)
+}
+
+.right{
+    
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+
+.em{
+    
+    padding-left: 20px;
+    width:350px;
+    height: 40px;
+    border-radius: 20px;
+    border:1px solid rgb(224, 112, 112);
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    background-color: rgb(213, 62, 36);
+    color: white;
+}
+.logbutton{
+    padding: 8px 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(214, 14, 14);
+    color: rgb(242, 238, 238);
+}
+.regbutton{
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(214, 14, 14);
+    color: rgb(242, 238, 238);
+}
+
+.regbutton.hover{
+    margin-top: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    color: rgb(214, 14, 14);
+    background-color: rgb(241, 188, 188);
+
+}
+.tx{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(236, 7, 7);
+    font-weight: bold;
+    margin-top: 00px;
+}

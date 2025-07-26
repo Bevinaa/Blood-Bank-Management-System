@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+        <title>Login page</title>
+        <link rel="stylesheet" href="/static/bloodbank.css">
+{% endblock %}
+
+
+{% block body %}
+    <h1 style="text-align: center;color: white;">BloodBank Registration Form</h1>
+    <div class="main">
+        <form class="full_temp" method="post" action="/bloodbankreg">
+            
+            {% if info %}
+                <p class="query_font" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-style: italic;">{{ info }}</p>
+            {% endif %}
+
+
+            <p class="query_font">Blood Bank Name :</p>
+            <input class="inp_box" name="bb_name" type="text">
+            
+            <p class="query_font">Blood Bank Director Name :</p>
+            <input class="inp_box" name="bb_director_name" type="text">
+
+            <p class="query_font">Address :</p>
+            <input class="inp_box" name="bb_address" type="text">
+
+            <p class="query_font">Opening Time :</p>
+            <select id="myDropdown" name="open_time">
+                <option value="6 am">6 am</option>
+                <option value="7 am">7 am</option>
+                <option value="8 am">8 am</option>
+                <option value="9 am">9 am</option>
+                <option value="10 am">10 am</option>
+                <option value="11 am">11 am</option>
+        
+            </select>
+
+            <p class="query_font">Closing Time :</p>
+            <select id="myDropdown" name="close_time">
+                <option value="4 pm">4 pm</option>
+                <option value="5 pm">5 pm</option>
+                <option value="6 pm">6 pm</option>
+                <option value="7 pm">7 pm</option>
+                <option value="8 pm">8 pm</option>
+                <option value="9 pm">9 pm</option>
+                <option value="10 pm">10 pm</option>
+                <option value="11 pm">11 pm</option>
+        
+            </select>
+
+            
+    
+            <p class="query_font">Contact Number :</p>
+            <input class="inp_box" name="bb_contact" type="number">
+            
+            <p class="query_font">Email :</p>
+            <input class="inp_box" name="bb_email" type="email"><br>
+
+            <p class="query_font">New Password :</p>
+            <input class="inp_box" name="bb_pass1" type="password" placeholder="Type a new password"><br>
+            <p class="query_font">Retype Password :</p>
+            <input class="inp_box" name="bb_pass2" type="password" placeholder="Re-enter your password"><br>
+
+    
+
+            <input type="submit" class="submitbutton" name="bb_submit_button" value="Submit">
+    
+        </form>
+
+    </div>
+    
+    
+{% endblock %}

@@ -1,0 +1,61 @@
+body{
+    margin : 0;
+    font-family:sans-s;
+    background-image:url('/static/n3.jpg');
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100% 100%;
+    margin-bottom: 100px;
+    
+    
+}
+.main{
+    
+    width: 40%;
+    border-radius: 28px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    margin-left: 25%;
+    margin-bottom: 5%;
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255, 0.5);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    
+}
+.full_temp{
+    text-align: left;
+}
+
+
+.inp_box{
+
+    width:70%;
+    height: 40px;
+    border:1px solid rgb(198, 197, 197);
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    
+}
+
+.query_font{
+    
+    font-size: 25px;
+    display:flexbox;
+    color: white;
+    font-weight: bold;
+}
+
+.submitbutton{
+    padding: 8px 30px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: red;
+    color: rgb(245, 247, 245);
+}
